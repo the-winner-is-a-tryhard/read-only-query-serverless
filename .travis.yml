@@ -1,6 +1,11 @@
 language: python
 python:
   - "3.7"
+install:
+  - sudo apt-get install postgresql libpq-dev python3-dev
+  - sudo apt-get install
+  - pip install -r requirements.txt
 script:
   - cd test
   - python -m unittest handler_tests.HandlerTests
+  - python -m unittest repository_tests.RepositoryTests
