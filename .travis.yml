@@ -4,3 +4,4 @@ python:
 script:
   - cd test
   - python -m unittest handler_tests.HandlerTests
+  - python -m unittest repository_tests.RepositoryTests
