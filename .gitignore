@@ -105,3 +105,6 @@ venv.bak/
 
 # PyCharm
 .idea/
+
+# ZIP files (Lambda build artifacts)
+*.zip
