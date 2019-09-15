@@ -105,3 +105,10 @@ venv.bak/
 
 # PyCharm
 .idea/
+
+# ZIP files (Lambda build artifacts)
+*.zip
+
+#local psycopg2 installation
+psycopg2/
+psycopg2_binary-2.8.3.dist-info/
