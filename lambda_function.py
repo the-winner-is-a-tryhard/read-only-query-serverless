@@ -4,10 +4,14 @@ from repository.postgres_repository import execute_sql
 
 
 def lambda_handler(event, context):
-	sql = event['sql']
+	sql = event['body']
 	output = execute_sql(sql)
-	print(output)
 	return {
+		'isBase64Encoded': False,
+		'headers': {
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin': '*'
+		},
 		'statusCode': 200,
 		'body': json.dumps(output)
 	}
